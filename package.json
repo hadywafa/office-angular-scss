@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve  --ssl --ssl-cert \"./ssl/server.crt\" --ssl-key \"./ssl/server.key\"  --port 3000 -o ",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "validate": "office-toolbox validate -m manifest.xml"
   },
   "private": true,
   "dependencies": {
@@ -27,12 +28,17 @@
     "@angular/cli": "~14.0.2",
     "@angular/compiler-cli": "^14.0.0",
     "@types/jasmine": "~4.0.0",
+    "@types/office-js": "^1.0.265",
+    "@types/office-runtime": "^1.0.24",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "office-addin-debugging": "^2.4.4",
+    "office-addin-dev-certs": "^1.7.10",
+    "office-toolbox": "^0.1.1",
     "typescript": "~4.7.2"
   }
 }
